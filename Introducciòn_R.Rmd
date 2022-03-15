@@ -1,0 +1,71 @@
+---
+title: "Intruducciòn_R"
+author: "Stefani Cartagena"
+date: '2022-02-26'
+output: 
+    html_document:
+    fig_height: 6
+    fight_width: 8
+    theme: journal
+    highlight: zenburn
+    toc: yes
+    toc_depht: 4
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Ejercicio 1
+
+```{r Ejercicio 1}
+ciudad <- "Tena"
+
+print(ciudad) 
+```
+
+## Ejercicio 2
+
+```{r Ejercicio 2}
+
+pais_1 <- c("Brasil", "Colombia","Ecuador","Argentina")
+
+print(pais_1) 
+```
+## Ejercicio 3
+
+```{r Ejercicio 3}
+datos_estudiantes = data.frame(num_estudiantes = paste0("N.estudiantes", 1:10), Nombre = c("Bryan", "Michelle", "Nathaly", "Emily", "Martha", "Patricio", "Nicolas", "Jeremy", "Mateo", "Andrea"), Apellido = c("Villacres", "Rivera", "Cartagena", "Almeida", "Aragon", "Cepeda", "Valencia", "Vasco", "Achote", "Morales"), horas_totales = sample(1:95, 20, replace = TRUE), dias_cumplidos =sample(1:10, 10, replace = TRUE) )
+
+datos_estudiantes
+
+```
+## Ejercicio 4 
+
+```{r Ejercicio 4}
+
+?DNase
+
+print(head(DNase, 4))
+
+cantidad_0 = subset(DNase, conc >= 0.1 & conc <= 0.2)
+
+print(cantidad_0) 
+
+
+```
+
+## Ejercicio 5
+
+```{r Ejercicio 5}
+
+?DNase
+
+cantidad_1 = subset(DNase, Run != 5 & conc > 0.2 & density <= 1.0)
+
+print(cantidad_1) 
+
+```
